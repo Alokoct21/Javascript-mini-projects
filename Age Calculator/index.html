@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="ageInput">
+            <input type="text" placeholder="Enter your Birth Year" id="age">
+            <h1 id="showage">0</h1>
+        </div>
+        <div class="btn">
+            <button onclick="calculateAge()">Calculate Age</button>
+
+        </div>
+    </div>
+
+
+
+
+    <script>
+
+        function calculateAge() {
+
+            let year = +document.getElementById("age").value;
+
+            let cuurentYear = new Date();
+            let cuurentYear1 = parseInt(cuurentYear.getFullYear());
+
+            let age = cuurentYear1 - year
+
+            document.getElementById("showage").innerHTML = `Your age is ${age}`;
+
+
+        }
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
