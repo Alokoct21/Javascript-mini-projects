@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #ff4136;
+}
+
+.heading h1 {
+    color: #fff;
+    text-align: center;
+    font-weight: 900;
+    font-size: 70px;
+    margin-top: 40px;
+}
+
+.heading p {
+    color: #fff;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.inputbox {
+    margin-left: 30%;
+    margin-top: 5%;
+}
+
+.inputbox label {
+    color: #fff;
+
+}
+
+.inputbox input {
+    padding: 10px;
+    border: 0;
+    outline: 0;
+    border-radius: 5px;
+    margin: 10px;
+
+
+}
+.percentage h2{
+    text-align: center;
+    color: #fff;
+    margin-top: 5rem;
+    font-size: 50px;
+}
+
+.btnbox button {
+    margin-left: 45%;
+    margin-top: 7%;
+    padding: 10px;
+    border: 0;
+    outline: 0;
+    border-radius: 5px;
+    color: red;
+
+}
