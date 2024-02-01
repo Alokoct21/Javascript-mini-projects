@@ -1,5 +1,5 @@
 
-# Welcome 🖐 to the Age Calculator
+# Welcome 🖐 to the QR Code Generator
 It is a simple Javascript project which Generate the QR code Text or URL
 
 ## Default view
