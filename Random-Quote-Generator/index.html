@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Quote</title>
+    <link rel="stylesheet" href="styles.css">
+
+
+
+</head>
+
+<body>
+    <div class=" container">
+        <p id="textQuote"><br>
+        <p id="author"></p>
+        </p>
+        <button onclick="addQuote()">Next</button>
+    </div>
+
+    <script>
+        async function addQuote() {
+            const url = `https://dummyjson.com/quotes/random`;
+
+            const response = await fetch(url);
+            const data = await response.json();
+
+            if (data.quote.value === '') {
+                document.getElementById("textQuote").innerHTML = "There is no Quote.";
+
+            } else {
+                document.getElementById("textQuote").innerHTML = `"${data.quote}"`;
+                document.getElementById("author").innerText = `Author : ${data.author}`;
+            }
+
+        }
+
+
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>
