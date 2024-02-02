@@ -1,5 +1,5 @@
 
-# Welcome 🖐 to the QR Code Generator
+# Welcome 🖐 to the Random Quote Generator
 It is a simple Javascript project Random Quote Generate
 
 ## Default view
