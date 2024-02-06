@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form-input</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <form action="#">
+            <div class="inputBox1">
+                <input type="text" placeholder="Full Name" id="name">
+                <p id="nameError"></p>
+            </div>
+            <div class="inputBox2">
+                <input type="password" placeholder="Password" id="password">
+                <p id="passwordError"></p>
+            </div>
+        </form>
+        <div class="btnBox">
+            <button onclick="submit()">Submit</button>
+        </div>
+    </div>
+
+
+
+    <script>
+
+        let nameError = document.getElementById("nameError");
+        let passwordError = document.getElementById("passwordError");
+
+        let name = document.getElementById('name');
+        let password = document.getElementById('password');
+
+
+
+        function submit() {
+
+            if (name.value == "") {
+                nameError.innerHTML = "enter the name";
+            }else if (name != "") {
+                nameError.remove();
+            }
+            if (password.value == "") {
+                passwordError.innerHTML = "enter the password";
+            }else if (password != "") {
+                passwordError.remove();
+            }
+
+            
+
+        }
+    </script>
+
+</body>
+
+</html>
