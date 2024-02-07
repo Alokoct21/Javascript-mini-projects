@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop watch</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <div class="stopwatch">
+        <h1 id="displayTime">00:00:00</h1>
+
+        <div class="buttons">
+
+            <button onclick="watchstop()"><i class="fa-solid fa-stop"></i></button>
+            <button onclick="watchstart()"><i class="fa-solid fa-play"></i></button>
+            <button onclick="watchrestart()"><i class="fa-solid fa-rotate-right"></i></button>
+        </div>
+    </div>
+
+
+    <script>
+        let [seconds, minutes, hours] = [0, 0, 0];
+        let displayTime = document.getElementById("displayTime");
+
+        let timer = null;
+
+        function stopwatch() {
+            seconds++;
+            if (seconds == 60) {
+                seconds = 0;
+                minutes++;
+                if (minutes == 60) {
+                    minutes = 0;
+                    hours++;
+
+                }
+            }
+            let h = hours < 10 ? "0" + hours : hours;
+            let m = minutes < 10 ? "0" + minutes : minutes;
+            let s = seconds < 10 ? "0" + seconds : seconds;
+
+            displayTime.innerHTML = h + ":" + m + ":" + s;
+        }
+
+        function watchstart() {
+            if (timer != null) {
+                clearInterval(timer)
+            }
+            timer = setInterval(stopwatch, 1000);
+
+        }
+
+        function watchstop() {
+            clearInterval(timer);
+        }
+        function watchrestart() {
+            clearInterval(timer);
+            [seconds, minutes, hours] = [0, 0, 0];
+            displayTime.innerHTML = "00:00:00";
+
+        }
+
+
+
+    </script>
+</body>
+
+</html>
