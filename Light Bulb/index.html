@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light Bulb</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="bulbImg">
+            <img src="/off-bulb.png" alt="" id="bulb">
+
+        </div>
+        <button onclick="lightOn()">Light On</button>
+        <button onclick="lightOff()">Light Off</button>
+
+
+        <script>
+
+            let bulb = document.getElementById("bulb");
+            let btn = document.querySelector("button");
+
+            function lightOn() {
+                bulb.src = '/light-bulb.png';
+            }
+            function lightOff() {
+                bulb.src = '/off-bulb.png';
+            }
+
+
+
+        </script>
+
+    </div>
+
+</body>
+
+</html>
