@@ -11,23 +11,28 @@
 <body>
     <div class="container">
         <div class="bulbImg">
-            <img src="/off-bulb.png" alt="" id="bulb">
+            <img src="/off-bulb.png" alt="" class="off" id="bulb">
 
         </div>
-        <button onclick="lightOn()">Light On</button>
-        <button onclick="lightOff()">Light Off</button>
+        <button onclick="toggleOn()" id="btn">Light On</button>
+        <button onclick="toggleOff()">Off Light</button>
+
 
 
         <script>
 
-            let bulb = document.getElementById("bulb");
-            let btn = document.querySelector("button");
+            let bulbimg = document.getElementById("bulb");
 
-            function lightOn() {
-                bulb.src = '/light-bulb.png';
+
+            let btn = document.getElementById("btn");
+
+            function toggleOn() {
+                bulbimg.src = "light-bulb.png";
+
             }
-            function lightOff() {
-                bulb.src = '/off-bulb.png';
+            function toggleOff() {
+                bulbimg.src = "off-bulb.png";
+
             }
 
 
