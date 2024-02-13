@@ -17,39 +17,28 @@
 
 
 
-    <button onclick="toggleDarkMode()" id="btn"> Light Mode</button>
+    <button id="btn"><i id="icon" class="fa-solid fa-sun"></i></button>
 
     <script>
         // Function to toggle dark mode
-        function toggleDarkMode() {
-            const body = document.body;
-            let btn = document.getElementById("btn");
+        let btn = document.getElementById("btn");
+        let icon = document.getElementById("icon");
 
+        btn.addEventListener("click", () => {
 
-
-
-
-            body.classList.toggle("dark-mode");
-
-            if (btn.click) {
-                btn.classList.toggle("btncolor");
-
-            }
-            if (body.classList.contains("dark-mode")) {
-                btn.innerHTML = "Dark Mode";
-
+            if (icon.classList.contains("fa-sun")) {
+                icon.classList.remove("fa-sun");
+                icon.classList.add("fa-moon");
+                document.body.style.backgroundColor = "#333";
+                btn.classList.add("btncolor1");
             } else {
-                btn.innerHTML = "Light Mode";
-
+                icon.classList.remove("fa-moon");
+                icon.classList.add("fa-sun");
+                document.body.style.backgroundColor = "#fff";
+                btn.classList.add("btncolor2");
             }
+        })
 
-
-
-
-
-
-
-        }
     </script>
 
 </body>
