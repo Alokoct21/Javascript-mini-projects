@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="diceImg">
+            <img src="" alt="" id="dice">
+
+        </div>
+        <!-- <button onclick="diceRoll()">Roll Dice</button> -->
+
+    </div>
+
+    <script>
+        let dice = document.getElementById("dice");
+        let num = Math.floor(Math.random() * 5 + 1);
+
+        
+
+            if (num === 1) {
+                dice.src = "images/one.png";
+
+            } if (num === 2) {
+                dice.src = "images/two.png";
+
+            } if (num === 3) {
+                dice.src = "images/three.png";
+
+            } if (num === 4) {
+                dice.src = "images/four.png";
+
+            } if (num === 5) {
+                dice.src = "images/five.png";
+
+            } if (num === 6) {
+                dice.src = "images/six.png";
+
+            }
+
+
+
+        
+        
+
+    </script>
+</body>
+
+</html>
